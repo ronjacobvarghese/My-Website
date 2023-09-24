@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import HotelDB from '@/public/hoteldb.png';
+import LazzzyBoard from '@/public/LazzzyBoard.png'
+import ReactWeather from '@/public/React-weather.png'
 
 export const links = [
   {
@@ -27,60 +27,48 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
 ] as const;
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Associate Engineering Trainee",
+    location: "Hitachi Vantara, Bangalore",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I was in the application development team primarily working with react and typescript, then moved to a project with data management using Oracle FAW and OAC ",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2023 January - 2023 August",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Graduation",
+    location: "Amrita School Of Computing, Kerala",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Completion Of my 4 years of education to obtain my bachelors degree in Computer Science Engineering. Still working with professors to write a paper majoring in deep learning architectures.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2019-present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "R-Weather",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "The Weather Application is a user-friendly web-based tool that provides real-time weather information for locations world wide",
+    tags: ["React", "MongoDB", "OpenWeatherAPI"],
+    imageUrl: ReactWeather,
   },
   {
-    title: "rmtDev",
+    title: "Umai",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Umai is a hotel management system with desirable user-experience with all the mandatory functionalities like Add, Edit and Delete.",
+    tags: ["Java", "JavaFx", "PostgreSQL"],
+    imageUrl: HotelDB,
   },
   {
-    title: "Word Analytics",
+    title: "Lazzy Space",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Provides Effortless Task Management with seamless file sharing, LazzySpace is here to revolutionize the way you work, collaborate and conquer tasks.",
+    tags: ["React", "Express JS", "SQL", "Mantine", "MongoDB" ],
+    imageUrl: LazzzyBoard,
   },
 ] as const;
 
@@ -94,14 +82,10 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
   "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
 ] as const;
