@@ -1,6 +1,7 @@
 import { default as matter } from "gray-matter";
 import Markdown from "react-markdown";
 import fs from "fs";
+import path from "path";
 
 import "./blogs.css";
 
@@ -11,8 +12,8 @@ interface Props {
 }
 
 const getBlogContent = (slug: string) => {
-  const filePath = "lib/blogs/" + slug + ".md";
-  const file = fs.readFileSync(filePath);
+  const filePath = "/lib/blogs/" + slug + ".md";
+  const file = fs.readFileSync(process.cwd() + filePath);
   const { data: metadata, content: blogContent } = matter(file);
   return {
     metadata,

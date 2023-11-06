@@ -6,6 +6,7 @@ import SectionHeader from "./SectionHeader";
 import useSectionInView from "@/hooks/use-section-in-view";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface Props {
   blogs: {
@@ -60,7 +61,12 @@ export default function Blogs({ blogs }: Props) {
                 {blog.metadata.excerpt}
               </p>
             </div>
-            <img src={blog.metadata.cover_image} width={200} height={120} />
+            <Image
+              src={blog.metadata.cover_image}
+              alt=""
+              width={200}
+              height={120}
+            />
           </motion.div>
         ))}
       </div>
