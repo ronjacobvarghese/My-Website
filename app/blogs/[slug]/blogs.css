@@ -1,0 +1,48 @@
+.blog h2{
+  @apply text-[1.5rem] pt-[1.5rem] font-bold pb-4
+}
+
+.blog h3{
+  @apply text-[1.2rem] pt-[1.5rem] font-semibold pb-2
+}
+
+.blog ul{
+  @apply list-disc pl-[1rem] leading-[2rem]
+}
+
+.blog pre{
+  @apply  min-w-full p-[1.5rem] m-[1rem] ml-0 bg-gray-100 border border-gray-300 dark:bg-slate-950 dark:border-slate-600 rounded-xl overflow-auto text-sm leading-[2rem]
+}
+
+.blog code{
+  @apply bg-gray-200 dark:bg-slate-700/20 p-1 px-[8px]  border border-gray-300 rounded-md font-semibold text-[#EB5757] dark:border-slate-700
+}
+
+.blog pre code{
+  @apply bg-gray-100 dark:bg-transparent border-0 text-black dark:text-white font-normal
+}
+
+.blog p{
+  word-spacing: 2px;
+  @apply !leading-[2rem]
+}
+
+.blog ol{
+  @apply list-decimal pl-[1rem] leading-[2rem] py-[1rem]
+}
+
+::-webkit-scrollbar {
+  /* Customize the scrollbar width */
+  @apply !w-2 !h-1
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent 
+  /* Customize the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400/40 rounded-full
+  /* Customize the scrollbar thumb */
+}
+

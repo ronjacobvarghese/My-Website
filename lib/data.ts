@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import HotelDB from '@/public/hoteldb.png';
-import LazzzyBoard from '@/public/LazzzyBoard.png'
-import ReactWeather from '@/public/React-weather.png'
+import HotelDB from "@/public/hoteldb.png";
+import LazzzyBoard from "@/public/LazzzyBoard.png";
+import ReactWeather from "@/public/React-weather.png";
 
 export const links = [
   {
@@ -14,6 +14,10 @@ export const links = [
   {
     name: "About",
     hash: "#about",
+  },
+  {
+    name: "Blogs",
+    hash: "#blogs",
   },
   {
     name: "Projects",
@@ -67,8 +71,26 @@ export const projectsData = [
     title: "Lazzy Space",
     description:
       "Provides Effortless Task Management with seamless file sharing, LazzySpace is here to revolutionize the way you work, collaborate and conquer tasks.",
-    tags: ["React", "Express JS", "SQL", "Mantine", "MongoDB" ],
+    tags: ["React", "Express JS", "SQL", "Mantine", "MongoDB"],
     imageUrl: LazzzyBoard,
+  },
+] as const;
+
+export const blogData = [
+  {
+    title: "Your Server-state Management Solution: React Query",
+    description:
+      "Ever tried using fetch and useEffect to fetch queries?? Yeah its painfull. If that's the case React-Query is your next destination, let look into it!!",
+  },
+  {
+    title: "Next-gen Approach to API Developement: tRPC",
+    description:
+      "Ever wanted type safety and auto-complete between client and server? tRPC does the impossible, lets learn it!!",
+  },
+  {
+    title: "Prisma: the ORM we all needed!!",
+    description:
+      "Prisma is a modern, open-source database toolkit and Object-Relational Mapping (ORM) system that simplifies database access for developers. It provides a type-safe and efficient way to interact with databases using a straightforward and intuitive API, making it easier to work with databases and manage data in your web applications.",
   },
 ] as const;
 

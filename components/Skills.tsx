@@ -41,7 +41,6 @@ export default function Skills() {
             }}
             className="bg-gray-100 border borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
             key={index}
-            custom={index}
           >
             {skill}
           </motion.li>
