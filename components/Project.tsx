@@ -45,21 +45,21 @@ export default function Project({
           {link && (
             <Link
               target="_blank"
-              className="p-2 bg-slate-300/20 rounded-full border border-slate-300/70 flex items-center justify-center w-10 h-10"
+              className="p-2 bg-gray-300/40 border-gray-400/80 dark:bg-slate-300/20 rounded-full border dark:border-slate-300/70 flex items-center justify-center w-10 h-10"
               href={link}
             >
-              <BsLink size="1.2rem" className="text-slate-300/80" />
+              <BsLink size="1.2rem" className="dark:text-slate-300/80" />
             </Link>
           )}
           {document && (
             <Link
               target="_blank"
-              className="p-2 bg-slate-300/20 rounded-full border border-slate-300/70 flex items-center justify-center w-10 h-10"
+              className="p-2 bg-gray-300/40 border-gray-400/80  dark:bg-slate-300/20 rounded-full border dark:border-slate-300/70 flex items-center justify-center w-10 h-10"
               href={document}
             >
               <IoDocumentTextOutline
                 size="1.2rem"
-                className="text-slate-300/80"
+                className="dark:text-slate-300/80"
               />
             </Link>
           )}
