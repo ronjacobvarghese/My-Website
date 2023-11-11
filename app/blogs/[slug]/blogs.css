@@ -2,6 +2,9 @@
   @apply text-[1.5rem] pt-[1.5rem] font-bold pb-4
 }
 
+.blog h1{
+  @apply text-[1.7rem] pt-[1.5rem] font-bold pb-4
+}
 .blog h3{
   @apply text-[1.2rem] pt-[1.5rem] font-semibold pb-2
 }

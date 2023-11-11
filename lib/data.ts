@@ -1,9 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import HotelDB from "@/public/hoteldb.png";
-import LazzzyBoard from "@/public/LazzzyBoard.png";
+import NotYoutube from "@/public/Not-Youtube.png";
+import PopupGen from "@/public/PopupGen.png";
 import ReactWeather from "@/public/React-weather.png";
 
 export const links = [
@@ -54,25 +53,32 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Not-Youtube",
+    description:
+      "Youtube is a social-media platform that has over 1 Billion videos across 37 million active youtube channels. This project is both a redesign and my approach to their platform.",
+    tags: ["NextJs", "Prisma", "tRPC", "NextAuth", "Typescript"],
+    imageUrl: NotYoutube,
+    link: "https://not-youtube-taupe.vercel.app/",
+    document:
+      "https://www.notion.so/Not-Youtube-e95931cfdb49444295ec41f869bdd7a9?pvs=4",
+  },
+  {
+    title: "Popup-Generator",
+    description:
+      "This web application generates customizable popup and generates JavaScript code which can be seamlessly integrated into your projects.",
+    tags: ["ReactJS", "TailwindCSS", "TypeScript", "React-Context"],
+    imageUrl: PopupGen,
+    link: "https://imaginative-jelly-336464.netlify.app/",
+    document: "",
+  },
+  {
     title: "R-Weather",
     description:
       "The Weather Application is a user-friendly web-based tool that provides real-time weather information for locations world wide",
     tags: ["React", "MongoDB", "OpenWeatherAPI"],
     imageUrl: ReactWeather,
-  },
-  {
-    title: "Umai",
-    description:
-      "Umai is a hotel management system with desirable user-experience with all the mandatory functionalities like Add, Edit and Delete.",
-    tags: ["Java", "JavaFx", "PostgreSQL"],
-    imageUrl: HotelDB,
-  },
-  {
-    title: "Lazzy Space",
-    description:
-      "Provides Effortless Task Management with seamless file sharing, LazzySpace is here to revolutionize the way you work, collaborate and conquer tasks.",
-    tags: ["React", "Express JS", "SQL", "Mantine", "MongoDB"],
-    imageUrl: LazzzyBoard,
+    link: "",
+    document: "",
   },
 ] as const;
 
@@ -101,7 +107,11 @@ export const skillsData = [
   "TypeScript",
   "React",
   "Next.js",
+  "Prisma",
+  "tRPC",
+  "React Query",
   "Node.js",
+  "SQL",
   "Git",
   "Tailwind",
   "MongoDB",
