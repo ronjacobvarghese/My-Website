@@ -63,9 +63,9 @@ export const projectsData = [
       "https://www.notion.so/Not-Youtube-e95931cfdb49444295ec41f869bdd7a9?pvs=4",
   },
   {
-    title: "Popup-Generator",
+    title: "Survey-Generator",
     description:
-      "This web application generates customizable popup and generates JavaScript code which can be seamlessly integrated into your projects.",
+      "This web application generates customizable surveys and generates JavaScript code which can be seamlessly integrated into your projects.",
     tags: ["ReactJS", "TailwindCSS", "TypeScript", "React-Context"],
     imageUrl: PopupGen,
     link: "https://imaginative-jelly-336464.netlify.app/",
