@@ -7,20 +7,18 @@ import useSectionInView from "@/hooks/use-section-in-view";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { Blog } from "@/.contentlayer/generated";
 
 interface Props {
-  blogs: {
-    slug: string;
-    metadata: {
-      [key: string]: string;
-    };
-  }[];
+  blogs: Blog[];
 }
 
 export default function Blogs({ blogs }: Props) {
   const { ref } = useSectionInView("Blogs");
   const blogRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
+  console.log(blogs);
 
   const fadeInAnimationVariants = {
     initial: {
@@ -47,7 +45,9 @@ export default function Blogs({ blogs }: Props) {
         {blogs.map((blog, index) => (
           <motion.div
             variants={fadeInAnimationVariants}
-            onClick={() => router.replace(`/blogs/${blog.slug}`, {})}
+            onClick={() =>
+              router.replace(`/blogs/${blog._raw.flattenedPath}`, {})
+            }
             initial="initial"
             whileInView="animate"
             ref={blogRef}
@@ -56,13 +56,11 @@ export default function Blogs({ blogs }: Props) {
             custom={index}
           >
             <div>
-              <h2 className="text-left font-bold">{blog.metadata.title}</h2>
-              <p className="pl-4 line-clamp-2 text-gray-600">
-                {blog.metadata.excerpt}
-              </p>
+              <h2 className="text-left font-bold">{blog.title}</h2>
+              <p className="pl-4 line-clamp-2 text-gray-600">{blog.excerpt}</p>
             </div>
             <Image
-              src={blog.metadata.cover_image}
+              src={blog.coverImage?.filePath.replace("../public", "") ?? ""}
               alt=""
               width={200}
               height={120}

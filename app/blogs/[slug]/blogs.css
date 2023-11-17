@@ -22,7 +22,7 @@
 }
 
 .blog pre code{
-  @apply bg-gray-100 dark:bg-transparent border-0 text-black dark:text-white font-normal
+  all: unset !important;
 }
 
 .blog p{

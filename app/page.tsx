@@ -5,31 +5,12 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Blogs from "@/components/Blogs";
+import { allBlogs } from "@/.contentlayer/generated";
 // import Contact from "@/components/Contact";
-import fs from "fs";
-import matter from "gray-matter";
-
-const getBlogsMetadata = () => {
-  const folder = "lib/blogs";
-  const files = fs.readdirSync(folder);
-  const blogs = files.map((file) => {
-    const slug = file.replace(".md", "");
-
-    const mdFile = fs.readFileSync(`${folder}/${file}`, "utf-8");
-
-    const { data: metadata } = matter(mdFile);
-
-    return {
-      slug,
-      metadata,
-    };
-  });
-
-  return blogs;
-};
 
 export default function Home() {
-  const blogsData = getBlogsMetadata();
+  const blogs = allBlogs;
+
   return (
     <>
       <div className="bg-[#fbe2e3] absolute top-[-6rem] right-[11rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#346263]" />
@@ -38,7 +19,7 @@ export default function Home() {
         <Intro />
         <SectionDivider />
         <About />
-        <Blogs blogs={blogsData} />
+        <Blogs blogs={blogs} />
         <Projects />
         <Skills />
         <Experience />

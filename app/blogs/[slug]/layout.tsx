@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import "./blogs.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className={`${inter.className} pl-10 flex justify-center blog`}>
-      <div className="w-full md:w-[65%] md:max-w-[45rem]">{children}</div>
+    <main className={`${inter.className}`}>
+      <div>{children}</div>
     </main>
   );
 }
